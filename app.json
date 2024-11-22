@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "collegeapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
@@ -13,6 +13,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "entryPoint": "node_modules/expo-router/entry.js",
     "ios": {
       "supportsTablet": true
     },

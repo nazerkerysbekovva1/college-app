@@ -2,17 +2,17 @@ import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
 import { Pressable } from 'react-native';
-
+import { Text } from '@/components/Themed';
 import Colors from '@/constants/Colors';
 import { useColorScheme } from '@/components/useColorScheme';
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
 
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
+  size?: number; // Добавлено для передачи размера
 }) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
+  return <FontAwesome size={props.size ?? 28} style={{ marginBottom: -3 }} {...props} />;
 }
 
 export default function TabLayout() {
@@ -22,15 +22,21 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        // Disable the static render of the header on web
-        // to prevent a hydration error in React Navigation v6.
-        headerShown: useClientOnlyValue(false, true),
-      }}>
+        headerShown: false, // По умолчанию скрываем заголовок для всех вкладок
+      }}
+    >
+      {/* Tab 1 */}
       <Tabs.Screen
-        name="index"
+        name="home"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          headerShown: true, // Показать заголовок только для первой вкладки
+          headerTitle: () => (
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: Colors.light.text }}>
+              «Түркістан Ахмет Ясауи» кәсіби колледжі
+            </Text>
+          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} size={25} />, // Установка размера иконки
+          tabBarLabel: 'Басты', // Изменение текста в нижнем меню
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -47,11 +53,31 @@ export default function TabLayout() {
           ),
         }}
       />
+
+      {/* Tab 2 */}
       <Tabs.Screen
-        name="two"
+        name="teachers"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} size={25} />, // Установка размера иконки
+          tabBarLabel: 'Оқытушылар', // Изменение текста в нижнем меню
+        }}
+      />
+
+      {/* Tab 3 */}
+      <Tabs.Screen
+        name="chat"
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="send" color={color} size={22} />, // Установка размера иконки
+          tabBarLabel: 'Чат', // Изменение текста в нижнем меню
+        }}
+      />
+
+      {/* Tab 4 */}
+      <Tabs.Screen
+        name="info"
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="info" color={color} size={25} />, // Установка размера иконки
+          tabBarLabel: 'Ақпарат', // Изменение текста в нижнем меню
         }}
       />
     </Tabs>
