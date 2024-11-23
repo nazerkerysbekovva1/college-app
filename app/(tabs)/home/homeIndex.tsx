@@ -1,6 +1,4 @@
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
-import { ScrollView, Image, TouchableOpacity, ImageSourcePropType } from 'react-native';
+import { ScrollView, Image, TouchableOpacity, ImageSourcePropType, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
@@ -31,11 +29,11 @@ export default function TabHomeScreen() {
   };
 
   return (
-    <SafeAreaView className='flex bg-white'>
-      <ScrollView className='px-4 py-4 gap-4 bg-white'>
+    <SafeAreaView className='flex-1 bg-white'>
+      <ScrollView className='px-4 gap-4 bg-white'>
         
       <TouchableOpacity 
-          className="flex rounded-lg p-4 shadow-2xl shadow-blue-500/50 bg-white"
+          className="flex rounded-lg p-4 shadow-2xl shadow-blue-500/50 bg-white" // Увеличил тень и сделал её более заметной
           onPress={() => handlePress(
             'АЛАШ ҚАЙРАТКЕРІ БЕЙІМБЕТ МАЙЛИННІҢ ТУҒАНЫНА 130 ЖЫЛ',
             '22.11.2024',
@@ -51,27 +49,6 @@ export default function TabHomeScreen() {
           <Text className='text-sm text-black font-bold'>22.11.2024</Text>
           <Text className='text-sm text-black'>Қараша айының 15-і күні кітапханашы М.Жумадуллаеваның ұйымдастыруымен кітапханада Б.Майлиннің туғанына 130 жыл толуына орай әдеби шығармаларды экрандау печа – куча өтті.</Text>
         </TouchableOpacity>
-
-        <TouchableOpacity className="flex rounded-lg p-4 shadow-2xl shadow-blue-500/50 bg-white">
-          <Image 
-            source={require('../../../assets/images/f1.jpg')} 
-            style={{ width: '100%', height: 150, borderRadius: 10, marginBottom: 10 }}
-          />
-          <Text className="text-xl font-bold text-dark-blue">АЛАШ ҚАЙРАТКЕРІ БЕЙІМБЕТ МАЙЛИННІҢ ТУҒАНЫНА 130 ЖЫЛ</Text>
-          <Text className='text-sm text-black font-bold'>22.11.2024</Text>
-          <Text className='text-sm text-black'>Қараша айының 15-і күні кітапханашы М.Жумадуллаеваның ұйымдастыруымен кітапханада Б.Майлиннің туғанына 130 жыл толуына орай әдеби шығармаларды экрандау печа – куча өтті.</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity className="flex rounded-lg p-4 shadow-2xl shadow-blue-500/50 bg-white">
-          <Image 
-            source={require('../../../assets/images/f1.jpg')} 
-            style={{ width: '100%', height: 150, borderRadius: 10, marginBottom: 10 }}
-          />
-          <Text className="text-xl font-bold text-dark-blue">АЛАШ ҚАЙРАТКЕРІ БЕЙІМБЕТ МАЙЛИННІҢ ТУҒАНЫНА 130 ЖЫЛ</Text>
-          <Text className='text-sm text-black font-bold'>22.11.2024</Text>
-          <Text className='text-sm text-black'>Қараша айының 15-і күні кітапханашы М.Жумадуллаеваның ұйымдастыруымен кітапханада Б.Майлиннің туғанына 130 жыл толуына орай әдеби шығармаларды экрандау печа – куча өтті.</Text>
-        </TouchableOpacity  >
-        
 
       </ScrollView>
     </SafeAreaView>

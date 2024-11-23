@@ -67,7 +67,7 @@ module.exports = {
         third: '#666',
         line: '#eee',
         darkLine: '#bbb',
-        'primary-blue': '##4098D7',
+        'primary-blue': '#4098D7',
         'backg-blue': '#ccf5ff',
         'dark-blue': '#0A558C',
       },
