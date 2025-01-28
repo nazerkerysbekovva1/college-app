@@ -71,14 +71,6 @@ export default function TabLayout() {
       <Tabs.Screen
         name="chat"
         options={{
-          headerShown: true, 
-          headerTitle: () => (
-            <View className='flex-row items-center'>
-              <Text style={{ fontSize: 16, fontWeight: 'bold', color: 'black', paddingTop: 5 }}>
-                Чаты
-              </Text>
-            </View>
-          ),
           tabBarIcon: ({ color }) => (
             <View
               style={{
