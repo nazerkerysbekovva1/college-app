@@ -72,7 +72,7 @@ export default function TabSpecialtiesScreen() {
 
   return (
     <ImageBackground
-      source={require('../../../assets/images/spec/etb.jpg')} // Replace with your background image
+      source={require('../../../assets/images/spec/etb.png')} // Replace with your background image
       className="flex-1"
       resizeMode="cover"
     >

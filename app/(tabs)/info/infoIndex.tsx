@@ -5,9 +5,12 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function TabInfoScreen() {
+  const navigation = useNavigation();
+
+
   return (
     <ImageBackground
-      source={require('../../../assets/images/spec/etb.jpg')} // Replace with your background image path
+      source={require('../../../assets/images/spec/etb.png')} // Replace with your background image path
       style={{ flex: 1 }}
     >
       <SafeAreaView className='flex-1'>
@@ -18,7 +21,7 @@ export default function TabInfoScreen() {
 
       <ScrollView className='px-4 py-6'>
 
-          <TouchableOpacity className="flex flex-row items-center justify-between rounded-lg px-6 py-2 shadow-2xl shadow-blue-500/50 bg-white/90 mb-4">
+          <TouchableOpacity onPress={()=>navigation.navigate('page' as never)} className="flex flex-row items-center justify-between rounded-lg px-6 py-2 shadow-2xl shadow-blue-500/50 bg-white/90 mb-4">
             <Text className="text-base font-bold text-dark-blue">Колледж тарихы</Text>
             <Ionicons name="chevron-forward" size={24} color="#1E3A8A" />
           </TouchableOpacity>
@@ -47,6 +50,12 @@ export default function TabInfoScreen() {
             <Text className="text-base font-bold text-dark-blue">Спорт және спорттық инфрақұрылым</Text>
             <Ionicons name="chevron-forward" size={24} color="#1E3A8A" />
           </TouchableOpacity>
+
+          <TouchableOpacity className="flex flex-row items-center justify-between rounded-lg px-6 py-2 shadow-2xl shadow-blue-500/50 bg-white/90 mb-4">
+            <Text className="text-base font-bold text-dark-blue">WorldSkills</Text>
+            <Ionicons name="chevron-forward" size={24} color="#1E3A8A" />
+          </TouchableOpacity>
+
         </ScrollView>
       </SafeAreaView>
     </ImageBackground>
