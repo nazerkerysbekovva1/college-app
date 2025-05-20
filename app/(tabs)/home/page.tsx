@@ -23,10 +23,12 @@ export default function Page() {
   return (
     <SafeAreaView className='flex-1 bg-white'>
 
-        <TouchableOpacity onPress={() => navigation.goBack()} className='p-4 items-center flex-row gap-4'>
-          <FontAwesome name="arrow-left" size={15} color="black" />
+        <View className='p-4 items-center flex-row gap-4'>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <FontAwesome name="arrow-left" size={15} color="black" />
+            </TouchableOpacity> 
           <Text className='text-sm text-black'>Назад</Text>
-        </TouchableOpacity>
+        </View>
         
       <ScrollView className='p-4 gap-4'>
         
