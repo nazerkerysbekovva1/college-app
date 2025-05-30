@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect } from 'react';
 
-const API_URL = 'http://192.168.172.105:4000/api';
+// const API_URL = 'http://192.168.172.105:4000/api';
 
 export const fetchData = async (endpoint: string): Promise<any> => {
   const headers: HeadersInit = {
