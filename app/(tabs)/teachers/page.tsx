@@ -66,16 +66,21 @@ export default function Page() {
             <FontAwesome name="facebook" size={20} color="black" style={{ marginRight: 10 }} />
             <Text>{facebook}</Text>
           </TouchableOpacity>
-          <TouchableOpacity className='flex-row items-center' onPress={() => handleLinkPress(`https://www.instagram.com/${instagram}`)}>
+          {instagram && instagram.trim() !== '' && (
+          <TouchableOpacity
+            className="flex-row items-center"
+            onPress={() => handleLinkPress(`https://www.instagram.com/${instagram}`)}
+          >
             <FontAwesome name="instagram" size={20} color="black" style={{ marginRight: 10 }} />
             <Text>{instagram}</Text>
           </TouchableOpacity>
+        )}
         </View>
         
 
         {/* Достижения */}
         <Text className="text-xl font-bold text-black">Достижения:</Text>
-        <View className='flex w-80 justify-center'>
+        <View className='flex w-80 justify-center mb-10'>
           {achievements.map((achievement, index) => (
             <View key={index} className='flex-row mb-1'>
               <FontAwesome name="minus" size={20} color="black" style={{ marginRight: 10 }} />

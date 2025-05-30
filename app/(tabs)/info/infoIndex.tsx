@@ -21,7 +21,7 @@ export default function TabInfoScreen() {
 
       <ScrollView className='px-4 py-6'>
 
-          <TouchableOpacity onPress={()=>navigation.navigate('page' as never)} className="flex flex-row items-center justify-between rounded-lg px-6 py-2 shadow-2xl shadow-blue-500/50 bg-white/90 mb-4">
+          <TouchableOpacity className="flex flex-row items-center justify-between rounded-lg px-6 py-2 shadow-2xl shadow-blue-500/50 bg-white/90 mb-4">
             <Text className="text-base font-bold text-dark-blue">Колледж тарихы</Text>
             <Ionicons name="chevron-forward" size={24} color="#1E3A8A" />
           </TouchableOpacity>

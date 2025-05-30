@@ -25,10 +25,10 @@ export default function TabTeachersScreen() {
           tabBarLabelStyle: { fontSize: 11, fontWeight: 'bold' }, 
         }}
       >
+        <Tab.Screen name="Басшылық" component={Akimshilik} />
         <Tab.Screen name="ЕТБ" component={Bolim1} />
         <Tab.Screen name="Аграрлық" component={Bolim2} />
         <Tab.Screen name="Гуманитария" component={Bolim3} />
-        <Tab.Screen name="Басшылық" component={Akimshilik} />
       </Tab.Navigator>
     </SafeAreaView>
   );
