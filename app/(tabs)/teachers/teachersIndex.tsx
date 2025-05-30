@@ -4,10 +4,10 @@ import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { Config } from '@/constants/Colors';
+import Akimshilik from './akimshilik';
 import Bolim1 from './bolim1';
 import Bolim2 from './bolim2';
 import Bolim3 from './bolim3';
-import Akimshilik from './akimshilik';
 
 const Tab = createMaterialTopTabNavigator();
 
