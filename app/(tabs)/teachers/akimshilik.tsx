@@ -244,7 +244,7 @@ export default function Akimshilik() {
         </TouchableOpacity>
         
         <TouchableOpacity 
-          className="flex flex-row rounded-lg p-4 shadow-2xl shadow-blue-500/50 bg-white"
+          className="flex flex-row rounded-lg p-4 shadow-2xl shadow-blue-500/50 bg-white mb-20"
           onPress={() =>
             handlePress(
               'Дүйсенбай Фариза Мұхтарқызы',
