@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { FontAwesome } from '@expo/vector-icons';
@@ -17,13 +17,13 @@ export default function TabChatScreen() {
   const navigation = useNavigation<TabChatScreenNavigationProp>();
   const router = useRouter();
 
-  // Function to truncate text
-  const truncateText = (text: string, limit: number): string => {
-    return text.length > limit ? text.substring(0, limit) + "..." : text;
-  };
-
   return (
     <SafeAreaView className="flex-1 bg-white">
+
+       <View className='py-2 items-center mb-3'>
+          <Text className="text-xl font-bold text-dark-blue">Чаттар</Text>
+        </View>
+
       <ScrollView className="px-4 gap-4 bg-white">
         {/* First Chat Touchable */}
         <TouchableOpacity
@@ -33,16 +33,15 @@ export default function TabChatScreen() {
           <View className="flex flex-row items-center">
             {/* Replace Image with FontAwesome Icon */}
             <View className="w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center mr-4">
-              <FontAwesome name="user-circle" size={40} color="gray" />
+              <Image
+                source={require('../../../assets/images/Chatbot.jpg')}
+                style={{ width: 56, height: 56 }}
+              />
             </View>
             <View>
-              <Text className="text-lg font-bold text-dark-blue">Chat User 1</Text>
-              <Text className="text-gray-500">
-                {truncateText("Hello! How are you doing today? Let's catch up soon.", 20)}
-              </Text>
+              <Text className="text-base font-bold text-dark-blue">CollegeChatBot</Text>
             </View>
           </View>
-          <Text className="text-sm text-gray-400">10:30 AM</Text>
         </TouchableOpacity>
 
         {/* Second Chat Touchable */}
@@ -53,16 +52,12 @@ export default function TabChatScreen() {
           <View className="flex flex-row items-center">
             {/* Replace Image with FontAwesome Icon */}
             <View className="w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center mr-4">
-              <FontAwesome name="user-circle" size={40} color="gray" />
+              <FontAwesome name="question-circle" size={40} color="gray" />
             </View>
             <View>
-              <Text className="text-lg font-bold text-dark-blue">Chat User 2</Text>
-              <Text className="text-gray-500">
-                {truncateText("Are we meeting tomorrow at the usual spot?", 20)}
-              </Text>
+              <Text className="text-base font-bold text-dark-blue">HelpChatBot</Text>
             </View>
           </View>
-          <Text className="text-sm text-gray-400">Yesterday</Text>
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>

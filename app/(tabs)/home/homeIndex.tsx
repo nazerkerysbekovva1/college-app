@@ -79,7 +79,7 @@ export default function TabHomeScreen() {
             { page: 'worldskills', label: "WorldSkills", icon: <MaterialIcons name="emoji-events" size={30} color="#2563eb" /> },
             { page: 'specialties', label: "Мамандықтар", icon: <Ionicons name="briefcase-outline" size={30} color="#2563eb" /> },
             { page: 'teachers', label: "Оқытушылар", icon: <MaterialIcons name="people" size={30} color="#2563eb" /> },
-            { page: 'news', label: "Үрдіс", icon: <FontAwesome5 name="chart-line" size={30} color="#2563eb" /> },
+            { page: ' ', label: "Үрдіс", icon: <FontAwesome5 name="chart-line" size={30} color="#2563eb" /> },
           ].map((item, idx) => (
             <TouchableOpacity
               key={idx}

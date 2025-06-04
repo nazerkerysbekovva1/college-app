@@ -45,7 +45,7 @@ export default function Chat1() {
     </ScrollView>
 
     {/* Input Field */}
-    <View className="flex-row items-center pb-2 bg-white">
+    <View className="flex-row items-center pb-2 bg-white mb-18">
         <TextInput
           className="flex-1 border border-gray-300 rounded-lg px-4 py-2 text-base"
           placeholder="Сообщение..."

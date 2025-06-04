@@ -62,10 +62,12 @@ export default function Page() {
             <FontAwesome name="envelope" size={20} color="black" style={{ marginRight: 10 }} />
             <Text>{email}</Text>
           </TouchableOpacity>
+          {facebook && facebook.trim() !== '' && (
           <TouchableOpacity className='flex-row items-center' onPress={() => handleLinkPress(`https://www.facebook.com/${facebook}`)}>
             <FontAwesome name="facebook" size={20} color="black" style={{ marginRight: 10 }} />
             <Text>{facebook}</Text>
           </TouchableOpacity>
+          )}
           {instagram && instagram.trim() !== '' && (
           <TouchableOpacity
             className="flex-row items-center"
@@ -80,7 +82,7 @@ export default function Page() {
 
         {/* Достижения */}
         <Text className="text-xl font-bold text-black">Достижения:</Text>
-        <View className='flex w-80 justify-center mb-10'>
+        <View className='flex w-80 justify-center mb-10 pb-20'>
           {achievements.map((achievement, index) => (
             <View key={index} className='flex-row mb-1'>
               <FontAwesome name="minus" size={20} color="black" style={{ marginRight: 10 }} />
