@@ -57,10 +57,12 @@ function RootLayoutNav() {
         translucent={true}
       />
       <QueryClientProvider client={queryClient}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-        </Stack>
+        <Stack
+          // Отключаем header сразу для ВСЕХ screen’ов
+          screenOptions={{
+            headerShown: false
+          }}
+        />
       </QueryClientProvider>
     </>
   );
