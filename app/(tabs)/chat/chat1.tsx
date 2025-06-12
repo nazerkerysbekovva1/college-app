@@ -230,9 +230,9 @@ export default function Chat1() {
       </ScrollView>
 
       <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-        <View className="flex-row items-center pb-2 bg-white mb-18 absolute bottom-0">
+        <View className="flex-row items-center pb-2 mb-18 absolute bottom-0">
           <TextInput
-            className="flex-1 border border-gray-300 rounded-lg px-4 py-2 text-base"
+            className="flex-1 border bg-white border-gray-300 rounded-lg px-4 py-2 text-base"
             placeholder="Сұрақ жазыңыз..."
             value={input}
             onChangeText={setInput}
