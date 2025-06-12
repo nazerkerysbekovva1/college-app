@@ -16,7 +16,7 @@
     "entryPoint": "node_modules/expo-router/entry.js",
     "ios": {
       "supportsTablet": true,
-      "icon": "./assets/icon.png",
+      "icon": "./assets/icon-c.png",
       "bundleIdentifier": "com.anonymous.collegeapp",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
@@ -24,7 +24,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.png",
+        "foregroundImage": "./assets/icon-c.png",
         "backgroundColor": "#FFFFFF"
       },
       "permissions": [],
